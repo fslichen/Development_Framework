@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<!-- xmlns stands for XML name space. -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+	<!-- The template folder is used for storing HTML files for thymeleaf. -->
+	<h1>Hello World</h1>
+	<!-- th:text overwrites the default value. -->
+	<h2 th:text="${name}">Default Name</h2>
+	<h2 th:text="${gender}">Default Gender</h2>
+	<form method="get" action="/thymeleaf/get">
+		Name:<input type="text" name="name" />
+		Gender:<input type="text" name="gender" />
+		<button type="submit">Submit</button>
+	</form>
+</body>
+</html>

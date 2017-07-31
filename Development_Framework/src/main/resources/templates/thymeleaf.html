@@ -14,5 +14,14 @@
 		Gender:<input type="text" name="gender" />
 		<button type="submit">Submit</button>
 	</form>
+	<!-- th:each -->
+	<table>
+		<tr th:each="student:${students}">
+			<td th:text="${student.name}">Name</td>	
+			<td th:text="${student.gender}">Gender</td>	
+		</tr>
+	</table>
+	<!-- th:value -->
+	<input type="text" th:value="${age}" />
 </body>
 </html>

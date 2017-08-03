@@ -1,4 +1,4 @@
-package junit;
+package evolution.junit;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;

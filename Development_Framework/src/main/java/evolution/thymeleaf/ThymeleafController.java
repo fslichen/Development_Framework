@@ -1,4 +1,4 @@
-package evolution.controller.thymeleaf;
+package evolution.thymeleaf;
 
 import java.util.Arrays;
 import java.util.LinkedList;

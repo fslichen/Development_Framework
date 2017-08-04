@@ -1,8 +1,11 @@
 package evolution.controller.dto;
 
-public class Student {
+public class Student extends BaseDto {
 	private String name;
 	private String gender;
+	public Student() {
+
+	}
 	public Student(String name, String gender) {
 		this.name = name;
 		this.gender = gender;

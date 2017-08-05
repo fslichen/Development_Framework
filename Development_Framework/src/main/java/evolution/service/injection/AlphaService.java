@@ -14,8 +14,4 @@ public class AlphaService {
 	public AlphaService(BetaService anotherService) {// Constructor Injection
 		this.anotherService = anotherService;
 	}
-	
-	public String anyMethod() {
-		return "";
-	}
 }

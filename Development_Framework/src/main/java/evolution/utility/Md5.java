@@ -1,4 +1,4 @@
-package evolution.util;
+package evolution.utility;
 
 import java.security.MessageDigest;
 

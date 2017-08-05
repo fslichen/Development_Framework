@@ -1,9 +1,6 @@
-package evolution.service.pojo;
+package evolution.pojo;
 
 import java.lang.reflect.Field;
-
-import evolution.controller.dto.BaseDto;
-import evolution.controller.dto.Student;
 
 public class BasePojoDemo {
 	public static void main(String[] args) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {

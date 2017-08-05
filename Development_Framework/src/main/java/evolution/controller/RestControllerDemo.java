@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import evolution.controller.dto.Student;
+import evolution.pojo.Student;
 
 /**
  * RestController incorporates @ResponseBody

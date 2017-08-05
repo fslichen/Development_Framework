@@ -1,4 +1,4 @@
-package evolution.service.thread;
+package evolution.concurrent;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;

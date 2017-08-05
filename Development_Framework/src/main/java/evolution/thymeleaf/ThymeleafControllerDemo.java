@@ -11,7 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import evolution.controller.dto.Student;
+import evolution.pojo.Student;
 
 @Controller
 @RequestMapping("/thymeleaf")

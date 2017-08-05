@@ -1,4 +1,4 @@
-package evolution.controller.dto;
+package evolution.pojo;
 
 public class BaseDto {
 	private String name;

@@ -1,4 +1,4 @@
-package evolution.controller.dto;
+package evolution.pojo;
 
 import java.util.Date;
 

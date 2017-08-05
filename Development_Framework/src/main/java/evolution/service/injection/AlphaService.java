@@ -4,14 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class AnyService {
-	private AnotherService anotherService;
+public class AlphaService {
+	private BetaService anotherService;
 
 	@Autowired
-	private TheOtherService theOtherService;// Setter Injection
+	private GammaService theOtherService;// Setter Injection
 	
 	@Autowired
-	public AnyService(AnotherService anotherService) {// Constructor Injection
+	public AlphaService(BetaService anotherService) {// Constructor Injection
 		this.anotherService = anotherService;
 	}
 	

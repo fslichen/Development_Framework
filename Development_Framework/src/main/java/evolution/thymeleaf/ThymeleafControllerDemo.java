@@ -15,7 +15,7 @@ import evolution.controller.dto.Student;
 
 @Controller
 @RequestMapping("/thymeleaf")
-public class ThymeleafController {
+public class ThymeleafControllerDemo {
 	@GetMapping("/get")
 	public String thymeleafGet(Model model, HttpServletRequest request) {
 		// Request Data

@@ -1,28 +1,16 @@
-package evolution.controller;
+package evolution.service.pojo;
 
 import java.lang.reflect.Field;
-
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import evolution.controller.dto.BaseDto;
 import evolution.controller.dto.Student;
 
-@RestController
-public class AnyController {
-	@PostMapping("/post")
-	public String post() {
-		return "Hello World";
-	}
-	
-	@GetMapping("/get")
-	public String get() {
-		return "Hello World";
-	}
-	
+public class BasePojoDemo {
 	public static void main(String[] args) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
-		BaseDto baseDto = new Student("Chen", "M");
+		Student student = new Student();
+		student.setName("Chen");
+		student.setGender("M");
+		BaseDto baseDto = student;
 		// Reflect is able to get the field at runtime even if the field is not visibly declared. 
 		Field genderFiled = baseDto.getClass().getDeclaredField("gender");
 		genderFiled.setAccessible(true);

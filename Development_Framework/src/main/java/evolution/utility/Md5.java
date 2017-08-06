@@ -3,7 +3,7 @@ package evolution.utility;
 import java.security.MessageDigest;
 
 public class Md5 {
-	public static void main(String[] args) throws Exception {
+	public void encrypt() throws Exception {
 		String password = "123456";
 		MessageDigest md = MessageDigest.getInstance("MD5");
 		md.update(password.getBytes());

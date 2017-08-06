@@ -2,8 +2,13 @@ package evolution.pojo;
 
 import java.lang.reflect.Field;
 
-public class BasePojoDemo {
-	public static void main(String[] args) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class BasePojoControllerDemo {
+	@GetMapping("/pojo")
+	public void pojo() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
 		Student student = new Student();
 		student.setName("Chen");
 		student.setGender("M");

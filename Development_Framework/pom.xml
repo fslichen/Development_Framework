@@ -4,6 +4,8 @@
 	<groupId>com.evolution</groupId>
 	<artifactId>Development_Framework</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<!-- When building a war file, make it war -->
+	<packaging>jar</packaging>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -13,10 +15,6 @@
 		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
 		<!-- Spring Boot Core -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -31,12 +29,18 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<!-- You are only allowed to write tests under src/test/java once 
+			the scope is specified as test. Otherwise you will encounter a problem when
+			packaging your project using maven build. -->
 			<scope>test</scope>
 		</dependency>
 		<!-- JUnit Test -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
+			<!-- You are not allowed to write tests under src/main/java once 
+			the scope is specified as test. Otherwise you will encounter a problem when
+			packaging your project using maven build. -->
 			<scope>test</scope>
 		</dependency>
 		<!-- Lombok -->
@@ -54,5 +58,29 @@
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
 		</dependency>
+		<!-- Add the following dependency when making a war package. 
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            The default scope is compile. 
+            The dependency is provided at runtime rather than compiling time.
+            <scope>provided</scope>
+        </dependency>
+        -->
 	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>

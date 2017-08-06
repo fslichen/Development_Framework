@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class Log4jFileControllerDemo {
+public class Log4j2ConsoleControllerDemo {
 	private static Logger logger = LogManager.getLogger();
 	
 	// Please put log4j2.xml under the class path. (src/main/resources)
-	@GetMapping("/log4j/file")
+	@GetMapping("/log4j2/console")
 	public void log() {
 		logger.info("The current time is {}.", new SimpleDateFormat("MM/dd/yyyy HH:mm:ss").format(new Date()));
 	}

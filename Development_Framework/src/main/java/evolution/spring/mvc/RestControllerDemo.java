@@ -1,4 +1,4 @@
-package evolution.controller;
+package evolution.spring.mvc;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

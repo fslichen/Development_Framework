@@ -10,4 +10,8 @@ public interface XmlMapper {
 	public List<Map<String, Object>> selectMaps();
 	
 	public List<Student> selectAllStudents();
+	
+	public void insert(Student student);
+	
+	public void create();
 }

@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.SelectProvider;
 
 @Mapper
 public interface AnnotationMapper {
@@ -18,4 +19,16 @@ public interface AnnotationMapper {
 	
 	@Select("select * from any_table")
 	public List<Map<String, Object>> select();
+	
+	// Suitable for static case.
+	@SelectProvider(type = SqlBuilder.class, method = "selectBySqlBuilder")
+	public List<Student> selectBySelectProvider(@Param("name") String name);
+	
+	@Select("<script>"
+			+ "select * from any_table"
+			+ "<if test=\"name != null\">"
+			+ "where name = #{name}"
+			+ "</if>"
+			+ "</script>")
+	public List<Student> selectByScript(@Param("name") String name);
 }

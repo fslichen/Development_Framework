@@ -13,4 +13,10 @@
 	<select id="selectAllStudents" resultType="Student">
 		select * from any_table
 	</select>
+	<insert id="insert" parameterType="Student">
+		insert into any_table(name) values(#{name})
+	</insert>
+	<insert id="create">
+		create table if not exists any_table(id int primary key auto_increment, name varchar(10))
+	</insert>
 </mapper>

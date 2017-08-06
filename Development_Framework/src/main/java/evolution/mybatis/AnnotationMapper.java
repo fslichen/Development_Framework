@@ -8,10 +8,8 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
-import evolution.pojo.Student;
-
 @Mapper
-public interface MapperDemo {
+public interface AnnotationMapper {
 	@Insert("create table if not exists any_table(id int primary key auto_increment, name varchar(20))")
 	public void create();
 	
